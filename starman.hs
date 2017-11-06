@@ -1,12 +1,10 @@
 starman :: String -> Int -> IO ()
 starman word n = turn word ['-' | x <- word] n
 
-
 check :: String -> String -> Char -> (Bool, String)
-check word display c
-  = (c `elem` word, [if x==c
-          then c
-          else y | (x,y) <- zip word display])
+check word display c = 
+	let s = [if x==c then c else y | (x,y) <- zip word display]
+    in (c `elem` word, s)
 
 turn :: String -> String -> Int -> IO ()
 turn word display n =
