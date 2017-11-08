@@ -1,0 +1,21 @@
+name: guess
+
+dependencies:
+  - base
+
+library:
+  exposed-modules: Guess
+  source-dirs: ./
+  dependencies:
+    - random
+    - random-shuffle
+  # - foo       # List here the packages you
+  # - bar       # want to use in your solution.
+
+tests:
+  test:
+    main: guessSpec.hs
+    source-dirs: ./
+    dependencies:
+      - guess
+      - hspec

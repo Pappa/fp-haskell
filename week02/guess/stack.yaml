@@ -1,0 +1,4 @@
+resolver: lts-7.9
+extra-deps:
+  - random-1.1
+  - random-shuffle-0.0.4
